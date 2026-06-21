@@ -1,4 +1,5 @@
-# Final tuned gains: Kp = 25, Ki = 0, Kd = 1.8
+# Milestone 2 final tuned gains: Kp=25, Ki=0, Kd=1.8
+# Settles within ±0.05 rad by t=0.14s, holds through 5s.
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -18,6 +19,6 @@ plt.plot(t, states[:,2])
 plt.xlabel("time (s)")
 plt.ylabel("theta (rad)")
 
-plt.savefig("pid_response.png")
+plt.savefig("../runs/pid_response.png", dpi=150)
 plt.show()
 
