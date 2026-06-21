@@ -30,7 +30,7 @@ def rk4_step(s, F, dt):
     k4 = dynamics(s + dt*k3, F)
     return s + (dt/6.0) * (k1 + 2*k2 + 2*k3 + k4)
 
-def simulate(s0, controller, t_end, dt):
+def simulate(s0, controller, dt, t_end=5):
     """Run sim from s0 for t_end seconds. controller(s, t) -> F."""
     n_steps = int(t_end / dt)
     ts = np.linspace(0, t_end, n_steps+1)
